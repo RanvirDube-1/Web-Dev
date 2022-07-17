@@ -30,3 +30,13 @@ for (let i = 0; i < content.length;i++){
       fs.unlinkSync("mydir/"+content[i]);//to remove files form my directory
 }
 fs.rmdirSync("mydir");//remove my directory
+
+let fileExists = fs.existsSync("mydir");
+console.log(fileExists);//tells if dir is there or not
+console.log(".........");
+//tells if the path is a file or dir
+let op=fs.lstatSync(__dirname + "\\filesystem.js");
+let op2=op.isFile();
+console.log(op2);
+op2=op.isDirectory();
+console.log(op2);
