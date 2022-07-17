@@ -40,3 +40,9 @@ let op2=op.isFile();
 console.log(op2);
 op2=op.isDirectory();
 console.log(op2);
+
+for (let i = 1; i <= 10; i++) {
+       let dirpat='Lecture-${i}';
+       fs.mkdirSync(dirpat);
+       fs.writeFileSync(dirpat+"\\"+"readme.md",'# readme for ${dirpat}');
+}
